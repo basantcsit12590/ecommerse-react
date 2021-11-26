@@ -7,11 +7,13 @@ import Products from "./components/Products";
 import ProductContextProvider from "./Global/ProductContext";
 import Cart from "./components/Cart";
 import NotFound from "./components/NotFound";
+import CartContextProvider from "./Global/CartContext";
 
 function App() {
   return (
     <div className="App">
      <ProductContextProvider>
+     <CartContextProvider>
      <Router>
       <Navbar />
      
@@ -22,6 +24,7 @@ function App() {
       </Switch>
 
       </Router>
+      </CartContextProvider>
        </ProductContextProvider>
     </div>
   );
